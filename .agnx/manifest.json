@@ -1,0 +1,36 @@
+{
+  "id": "notes",
+  "name": "笔记",
+  "version": "0.1.0",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "contributes": {
+    "primarySegments": [
+      {
+        "id": "notes",
+        "label": "笔记",
+        "order": 50,
+        "itemProvider": "notes.entries"
+      }
+    ],
+    "itemProviders": [
+      {
+        "id": "notes.entries"
+      }
+    ],
+    "commands": [
+      {
+        "id": "notes.new",
+        "title": "新建笔记"
+      }
+    ],
+    "panels": [
+      {
+        "id": "editor",
+        "title": "笔记"
+      }
+    ]
+  }
+}
