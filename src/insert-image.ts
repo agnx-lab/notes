@@ -1,6 +1,6 @@
 // 场景：笔记图片托管插入 — pick/粘贴/拖拽落盘；markdown 写稳定路径，展示用 resolveObjectUrl。
 import type { Editor } from "@tiptap/core";
-import type { WorkspaceAppManagedFile } from "@getagnx/app-sdk";
+import type { WorkspaceAppManagedFile } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID } from "./ids";
 import {
   buildImageMarkdown,

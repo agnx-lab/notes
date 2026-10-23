@@ -1,5 +1,5 @@
 // 场景：agnx.notes 入口 — 宿主按 manifest.main / 包名 import 后调用 activate(host)。
-import type { WorkspaceAppHostApi, WorkspaceAppModule } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi, WorkspaceAppModule } from "@agnx-lab/app-sdk";
 import { registerNotesEditorPanel } from "./editor";
 import { NOTES_APP_ID } from "./list-contributions";
 import { activateNotesCore } from "./register-core";

@@ -1,5 +1,5 @@
 // 场景：Notes Markdown 主题 — 默认跟随全局；专属包仅笔记 Tab；不写 Music/氛围存盘。
-import type { WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID } from "./ids";
 
 export const NOTES_MARKDOWN_THEME_CONFIG_KEY = "markdown.theme";

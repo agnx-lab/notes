@@ -1,5 +1,5 @@
 // 场景：Notes 编辑 Tab 视图偏好 — 按 tabId 落盘（排版/主题/模式/换行），互不串台。
-import type { WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID } from "./ids";
 import { DEFAULT_NOTES_TYPOGRAPHY, type NotesTypographyState } from "./notes-typography";
 import {

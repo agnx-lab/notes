@@ -4,7 +4,7 @@ import type { ComponentType } from "react";
 import { useEffect, useState } from "react";
 import { ScrollView, View } from "react-native";
 import { StyleSheet, useUnistyles } from "react-native-unistyles";
-import type { WorkspaceAppActionBarProps, WorkspaceAppActionContribution } from "@getagnx/app-sdk";
+import type { WorkspaceAppActionBarProps, WorkspaceAppActionContribution } from "@agnx-lab/app-sdk";
 import {
   NOTES_EDITOR_CHROME_MENU_ID,
   NOTES_EDITOR_CHROME_SURFACE,

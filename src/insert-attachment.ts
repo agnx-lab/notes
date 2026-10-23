@@ -1,6 +1,6 @@
 // 场景：笔记添加文件 — pickAndImport 任意类型；图片走 image，其余走 notesAttachment。
 import type { Editor } from "@tiptap/core";
-import type { WorkspaceAppManagedFile } from "@getagnx/app-sdk";
+import type { WorkspaceAppManagedFile } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID } from "./ids";
 import { insertManagedImage } from "./insert-image";
 import { extensionOfName, resolveNotesAttachmentKind } from "./note-attachment-model";

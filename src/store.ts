@@ -7,7 +7,7 @@ import type {
   WorkspaceAppListItem,
   WorkspaceAppStorageApi,
   WorkspaceAppSyncApi,
-} from "@getagnx/app-sdk";
+} from "@agnx-lab/app-sdk";
 import { NOTES_PANEL_ID } from "./ids";
 import {
   createNoteId,

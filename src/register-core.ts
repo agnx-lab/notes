@@ -1,6 +1,6 @@
 // 场景：Notes 无 UI 贡献注册 — bundled 同步 activate 与磁盘 loader 共用。
 import { createElement } from "react";
-import type { WorkspaceAppHostApi, WorkspaceAppRunContext } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi, WorkspaceAppRunContext } from "@agnx-lab/app-sdk";
 import { FileDown, StickyNote, Trash2 } from "lucide-react-native";
 import { registerNotesAgentTools } from "./agent-tools";
 import { exportNoteMarkdown } from "./export-markdown";
@@ -49,12 +49,18 @@ export function createAndOpenNote(context?: WorkspaceAppRunContext): DemoNote {
 export const createAndOpenDemoNote = createAndOpenNote;
 
 function registerNotesCommandsAndShortcuts(nextHost: WorkspaceAppHostApi): void {
+  // product 键进 Tab 详情「快捷键」Rebind；Settings 经 detailManaged 剔除。
+  // 编辑器 chrome entity-menu 仍走 layoutManaged + 编辑布局。
   nextHost.registerShortcutGroup({
     id: "notes-product",
     appId: NOTES_APP_ID,
     groupKey: "notes",
     title: "Notes",
     kind: "product",
+    detailManagedShortcutSourceKeys: [
+      "sidebar-wechat-view-notes",
+      "notes-new",
+    ],
   });
   nextHost.registerCommand({
     id: NOTES_NEW_COMMAND_ID,
@@ -159,6 +165,20 @@ function registerNotesDetailSheetExtras(nextHost: WorkspaceAppHostApi): void {
           helpText:
             "本应用全部 Mermaid 图的默认主题；单图可在右上角「主题」覆盖。改后打开的预览会立即重渲。",
           valueContent: createElement(NotesMermaidThemeDetailField),
+        },
+        {
+          label: "切换到笔记主视图",
+          value: "",
+          groupId: "notes-shortcuts",
+          groupTitle: "快捷键",
+          shortcutHelpId: "sidebar-wechat-view-notes",
+        },
+        {
+          label: "新笔记",
+          value: "",
+          groupId: "notes-shortcuts",
+          groupTitle: "快捷键",
+          shortcutHelpId: "notes-new",
         },
       ];
     },

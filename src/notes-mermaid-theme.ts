@@ -1,5 +1,5 @@
 // 场景：Notes Mermaid 主题偏好 — host.config 落盘；NodeView 订阅后重渲。
-import type { WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID } from "./ids";
 
 export const NOTES_MERMAID_THEME_CONFIG_KEY = "mermaid.theme";

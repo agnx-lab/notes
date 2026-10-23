@@ -3,7 +3,71 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "build": "node /Users/apple/Documents/github/agnx/scripts/sub-apps/lib/build-agnx-glue.mjs --root=.",
-    "dev": "node /Users/apple/Documents/github/agnx/scripts/sub-apps/lib/dev-watch-agnx-glue.mjs --root=."
+    "build": "node -e \"const p=require('path');const root=process.env.AGNX_MONOREPO_ROOT||p.join(process.env.HOME||'', 'Documents/github/agnx');const s=p.join(root,'scripts/sub-apps/lib/build-agnx-glue.mjs');try{require('fs').accessSync(s)}catch{console.error('[agnx] 找不到 '+s+';请设 AGNX_MONOREPO_ROOT 指向 Agnx 仓');process.exit(1)}require('child_process').execFileSync(process.execPath,[s,'--root=.'],{stdio:'inherit'})\"",
+    "dev": "node -e \"const p=require('path');const root=process.env.AGNX_MONOREPO_ROOT||p.join(process.env.HOME||'', 'Documents/github/agnx');const s=p.join(root,'scripts/sub-apps/lib/dev-watch-agnx-glue.mjs');try{require('fs').accessSync(s)}catch{console.error('[agnx] 找不到 '+s+';请设 AGNX_MONOREPO_ROOT 指向 Agnx 仓');process.exit(1)}require('child_process').execFileSync(process.execPath,[s,'--root=.'],{stdio:'inherit'})\""
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/lang-markdown": "^6.5.2",
+    "@codemirror/language": "^6.13.1",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.15",
+    "@lezer/highlight": "^1.2.5",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/extension-character-count": "^3.32.0",
+    "@tiptap/extension-code-block-lowlight": "^3.32.0",
+    "@tiptap/extension-horizontal-rule": "^3.32.0",
+    "@tiptap/extension-image": "^3.32.0",
+    "@tiptap/extension-link": "^3.32.0",
+    "@tiptap/extension-paragraph": "^3.32.0",
+    "@tiptap/extension-placeholder": "^3.32.0",
+    "@tiptap/extension-table": "^3.32.0",
+    "@tiptap/extension-table-cell": "^3.32.0",
+    "@tiptap/extension-table-header": "^3.32.0",
+    "@tiptap/extension-table-row": "^3.32.0",
+    "@tiptap/extension-task-item": "^3.32.0",
+    "@tiptap/extension-task-list": "^3.32.0",
+    "@tiptap/extension-text-align": "^3.32.0",
+    "@tiptap/extension-typography": "^3.32.0",
+    "@tiptap/extension-underline": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/starter-kit": "^3.32.0",
+    "@tiptap/suggestion": "^3.32.0",
+    "lowlight": "^3.3.0",
+    "lucide-react-native": "^0.546.0",
+    "tiptap-markdown": "^0.9.0",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "jsdom": "^20.0.3",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "@agnx-lab/app-sdk": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-unistyles": "*"
+  },
+  "peerDependenciesMeta": {
+    "@agnx-lab/app-sdk": {
+      "optional": true
+    },
+    "@react-native-async-storage/async-storage": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    },
+    "react-native-unistyles": {
+      "optional": true
+    }
   }
 }

@@ -1,6 +1,6 @@
 // 场景：笔记编辑 entity-menu 双表面 — seed / 订阅 / 编辑布局（left 顶栏格式 + right 底栏状态）。
 import { useCallback, useSyncExternalStore } from "react";
-import type { WorkspaceAppActionBarLayout, WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppActionBarLayout, WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID } from "./ids";
 import {
   NOTES_EDITOR_CHROME_MENU_ID,

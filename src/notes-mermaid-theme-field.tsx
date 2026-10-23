@@ -8,7 +8,7 @@ import {
   type ComponentType,
 } from "react";
 import { Text } from "react-native";
-import type { WorkspaceAppSelectProps } from "@getagnx/app-sdk";
+import type { WorkspaceAppSelectProps } from "@agnx-lab/app-sdk";
 import { getNotesHost } from "./notes-host";
 import {
   getCachedNotesMermaidTheme,

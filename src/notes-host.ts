@@ -1,5 +1,5 @@
 // 场景：Notes 宿主引用位 — 避免 insert-image ↔ register-core 循环依赖。
-import type { WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 
 let hostApi: WorkspaceAppHostApi | null = null;
 

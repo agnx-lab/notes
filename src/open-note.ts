@@ -1,5 +1,5 @@
 // 场景：Notes 打开 Tab 桥 — 打破 register-core ↔ agent-tools 循环依赖。
-import type { WorkspaceAppRunContext } from "@getagnx/app-sdk";
+import type { WorkspaceAppRunContext } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID, NOTES_PANEL_ID } from "./ids";
 import type { DemoNote } from "./note-model";
 

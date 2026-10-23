@@ -1,0 +1,9 @@
+{
+  "appId": "notes",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "local"
+  },
+  "updatedAt": "2026-09-14T11:47:48.905Z"
+}

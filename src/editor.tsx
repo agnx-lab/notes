@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet as RNStyleSheet, Text, View, Pressable } from "react-native";
 import { StyleSheet, useUnistyles } from "react-native-unistyles";
-import type { WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 import {
   AUTOSAVE_DEBOUNCE_MS,
   countChars,

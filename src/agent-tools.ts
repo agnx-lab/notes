@@ -1,5 +1,5 @@
 // 场景：Notes Sub App 向 Agent 暴露 list/get/create/update/search/export/versions 工具。
-import type { WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 import { noteToMarkdownDocument } from "./note-model";
 import { NOTES_APP_ID } from "./ids";
 import { openNoteTab } from "./open-note";

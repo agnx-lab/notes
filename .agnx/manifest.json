@@ -32,5 +32,6 @@
         "title": "笔记"
       }
     ]
-  }
+  },
+  "icon": "./.agnx/icon.svg"
 }

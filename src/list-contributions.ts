@@ -1,6 +1,6 @@
 // 场景：Notes 列表面贡献 — 经 activate(host) 注册。
 import { StickyNote } from "lucide-react-native";
-import type { WorkspaceAppHostApi } from "@getagnx/app-sdk";
+import type { WorkspaceAppHostApi } from "@agnx-lab/app-sdk";
 import { NOTES_APP_ID, NOTES_NEW_COMMAND_ID, NOTES_PROVIDER_ID, NOTES_SEGMENT_ID } from "./ids";
 import { listNotesAsWorkspaceItems, useNotesDemoStore } from "./store";
 
